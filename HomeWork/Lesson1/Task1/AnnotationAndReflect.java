@@ -7,26 +7,27 @@ public class AnnotationAndReflect {
 
     public static void main(String[] args) {
         AnnotationAndReflect a = new AnnotationAndReflect();
-        insertFromAnnotationAndInvoke(new Test());
-        insertFromAnnotationAndInvoke(a);
+        searchAndInvokeMethodForAnnotation(new Test());
+        searchAndInvokeMethodForAnnotation(a);
     }
+
     @ParameterSource(first = "Hello", second = " Word!")
     private void seePararmeter(String first, String second) {
         System.out.print(first);
         System.out.println(second);
     }
 
-    private static void insertFromAnnotationAndInvoke(Object object) {
+    private static void searchAndInvokeMethodForAnnotation(Object object) {
         Class<?> cls = object.getClass();
         Method[] methods = cls.getDeclaredMethods();
         for (Method method : methods) {
             if (method.isAnnotationPresent(ParameterSource.class)) {
-                startMethod(object, method);
+                startMethodWithParameters(object, method);
             }
         }
     }
 
-    private static void startMethod(Object object, Method method) {
+    private static void startMethodWithParameters(Object object, Method method) {
         method.setAccessible(true);
         ParameterSource parameterSource = method.getAnnotation(ParameterSource.class);
         try {
