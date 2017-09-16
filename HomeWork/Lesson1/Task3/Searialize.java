@@ -4,7 +4,7 @@ import java.io.*;
 import java.lang.reflect.Field;
 
 
-public class Writer {
+public class Searialize {
 
     static PrintWriter printWriter;
     static BufferedReader bufferedReader;
