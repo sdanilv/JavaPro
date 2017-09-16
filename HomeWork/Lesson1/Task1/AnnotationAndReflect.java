@@ -1,3 +1,5 @@
+package Lesson1.Task1;
+
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
@@ -8,8 +10,7 @@ public class AnnotationAndReflect {
         insertFromAnnotationAndInvoke(new Test());
         insertFromAnnotationAndInvoke(a);
     }
-
-    @ParameterSource(first = "Hello", second = " word!")
+    @ParameterSource(first = "Hello", second = " Word!")
     private void seePararmeter(String first, String second) {
         System.out.print(first);
         System.out.println(second);
@@ -37,3 +38,7 @@ public class AnnotationAndReflect {
         }
     }
 }
+
+
+
+

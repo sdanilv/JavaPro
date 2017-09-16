@@ -1,3 +1,5 @@
+package Lesson1.Task1;
+
 import java.lang.annotation.*;
 
 @Inherited
