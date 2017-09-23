@@ -10,11 +10,15 @@ public class Searialize {
     static BufferedReader bufferedReader;
 
     public static void main(String[] args) throws IOException, IllegalAccessException {
-        printWriter = new PrintWriter("Serializable.txt");
-        bufferedReader = new BufferedReader(new FileReader("Serializable.txt"));
+        prepareWriteAndRead();
         save(new Test(1, "Hello"));
         Test test = (Test) load(new Test());
         System.out.println(test);
+    }
+
+    private static void prepareWriteAndRead() throws FileNotFoundException {
+        printWriter = new PrintWriter("Serializable.txt");
+        bufferedReader = new BufferedReader(new FileReader("Serializable.txt"));
     }
 
 
