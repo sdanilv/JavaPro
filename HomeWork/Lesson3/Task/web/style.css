@@ -1,0 +1,14 @@
+td{
+    background: darkgray;
+    width: 200px;
+    border-radius: 5px;
+ }
+
+.quest{
+    margin: auto;
+    padding: 10px;
+    width: 750px;
+    background: #90d1ce;
+    border-radius: 15px;
+}
+
