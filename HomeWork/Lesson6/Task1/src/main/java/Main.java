@@ -7,9 +7,6 @@ import java.io.InputStreamReader;
 import java.util.Random;
 
 public class Main {
-    static EntityManager em;
-    static EntityManagerFactory emf;
-    static Random r;
     static RoomData rooms;
 
     public static void main(String[] args) {
