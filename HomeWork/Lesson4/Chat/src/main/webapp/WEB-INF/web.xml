@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+
+	<servlet>
+		<servlet-name>AddServlet</servlet-name>
+		<servlet-class>Server.AddServlet</servlet-class>
+	</servlet>
+
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>Server.LoginServlet</servlet-class>
+    </servlet>
+	<servlet>
+		<servlet-name>GetServlet</servlet-name>
+		<servlet-class>Server.GetServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>StatusServlet</servlet-name>
+		<servlet-class>Server.StatusServlet</servlet-class>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/login</url-pattern>
+	</servlet-mapping>
+    <servlet-mapping>
+		<servlet-name>GetServlet</servlet-name>
+		<url-pattern>/get</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AddServlet</servlet-name>
+		<url-pattern>/add</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>StatusServlet</servlet-name>
+		<url-pattern>/status</url-pattern>
+	</servlet-mapping>
+
+</web-app>
